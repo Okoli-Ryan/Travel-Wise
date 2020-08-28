@@ -27,8 +27,10 @@ imgDisplay.forEach((el, i) => {
 
 search_results_outer.onclick = (e) => {
 	if (e.target.className.includes('slide')) {
-		if (e.target.className.includes('slide-next')) slide_index = (slide_index + 1) % 4;
-		else if (e.target.className.includes('slide-prev')) slide_index = (slide_index + 3) % 4;
+		if (e.target.className.includes('slide-next')) {
+			slide_index = (slide_index + 1) % 4;
+		}
+		else if (e.target.className.includes('slide-prev')) {slide_index = (slide_index + 3) % 4;}
 
 		search_results.scrollTo({
 			top: 0,

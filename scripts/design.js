@@ -10,6 +10,7 @@ const card = document.getElementsByClassName('card');
 const menu = document.getElementsByClassName('menu')[0];
 const nav_options_container = document.getElementsByClassName('nav-options-container')[0];
 let nav_display = false;
+const container_three = document.getElementsByClassName('container-three')[0]
 
 let activeEl = '';
 
@@ -46,7 +47,7 @@ function displayOptions() {
 
 slide_button_id.onclick = () => {
 	window.scrollBy({ behavior: 'smooth', left: 0, top: container[1].offsetTop });
-	setTimeout(() => search_bar.focus(), 500);
+	// setTimeout(() => search_bar.focus(), 500);
 };
 
 search_bar.onkeyup = displayOptions;
@@ -54,6 +55,7 @@ search_bar.onkeyup = displayOptions;
 search_bar.onblur = () => {
 	setTimeout(() => {
 		optionList.innerHTML = '';
+		window.scrollIntoView({behavior: 'smooth'})
 	}, 500);
 };
 
@@ -67,21 +69,24 @@ optionList.addEventListener('click', (e) => {
 	if (e.target.className === 'search-option') {
 		search_bar.value = e.target.innerHTML;
 		document.getElementsByClassName('city-name')[0].innerHTML = e.target.innerHTML;
-		search_results_outer.style.visibility = "visible"
+		search_results_outer.style.visibility = 'visible';
 		//
 	}
 });
 
 cancel.onclick = () => {
 	search_bar.value = '';
-	search_results_outer.style.visibility = "hidden"
+	search_results_outer.style.visibility = 'hidden';
 	document.getElementsByClassName('city-name')[0].innerHTML = '';
 };
 
 menu.onclick = () => {
-	if (nav_display) {nav_options_container.style.visibility = "hidden";
-nav_options_container.style.opacity = 0}
-	else {nav_options_container.style.visibility = "visible";
-nav_options_container.style.opacity = 1}
+	if (nav_display) {
+		nav_options_container.style.opacity = 0;
+		nav_options_container.style.visibility = 'hidden';
+	} else {
+		nav_options_container.style.visibility = 'visible';
+		nav_options_container.style.opacity = 1;
+	}
 	nav_display = !nav_display;
 };
