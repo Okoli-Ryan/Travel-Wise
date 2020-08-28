@@ -55,7 +55,7 @@ search_bar.onkeyup = displayOptions;
 search_bar.onblur = () => {
 	setTimeout(() => {
 		optionList.innerHTML = '';
-		window.scrollIntoView({behavior: 'smooth'})
+		container_three.scrollIntoView({behavior: 'smooth'})
 	}, 500);
 };
 
