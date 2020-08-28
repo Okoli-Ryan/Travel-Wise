@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Volkhov:wght@700&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body,
+html {
+	padding: 0;
+	margin: 0;
+	position: relative;	
+}
+
+.container-one,
+.container-two {
+	background-color: #269389;
+	height: 100vh;
+	min-height: 450px;
+	z-index: 4;
+	padding: 0 1.5rem
+
+	/* padding: .5rem */
+}
+
+.container-two {
+	/* background: rgb(198, 230, 198) */
+	background-color: aliceblue;
+}
+
+.container-one {
+	background-image: url('../images/bg-images/beach.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;	
+	/* display: none; */
+}
+
+.navbar {
+	background: white;
+	height: 3rem;
+	width: 100%;
+	z-index: 5;
+	padding: 0.5rem 1rem;
+	padding-right: 0;
+	position: fixed;
+	display: flex;
+	align-items: center;
+	background-color: white;
+}
+
+.brand-container {
+	width: 30%;
+}
+
+.brand-name {
+	font-size: 1.3rem;
+	font-weight: bolder;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.brand-name > span {
+	background-color: rgb(38, 131, 137);
+	color: white;
+	padding: 0.2rem 0.2rem;
+}
+
+.nav-options-container {
+	display: flex;
+	padding: 0 1rem;
+	padding-right: 0;
+	width: 70%;
+	justify-content: flex-end;
+	align-items: center;
+	/* display: none; */
+}
+
+.menu-container{
+	display: none
+}
+
+.nav-options-container > a {
+	padding: 0.8rem 1rem;
+	text-decoration: none;
+	margin-right: 3.5rem;
+	height: 100%;
+	font-size: 1.1rem;
+	color: rgb(38, 131, 137);
+	z-index: 5;
+	position: relative;
+}
+
+.nav-options-container > a::before {
+	content: '';
+	width: 2.5rem;
+	background-size: 0;
+	background-repeat: no-repeat;
+	z-index: 4;
+	left: 0;
+	position: absolute;
+	/* left: -1.7rem; */
+	top: 0.6rem;
+	height: 1.8rem;
+	transition: all 0.4s ease-in-out;
+	/* transition: ; */
+}
+
+.nav-options-container > a:hover {
+	color: rgb(117, 117, 255);
+	/* color: rgb(38,131,137) */
+	/* color: rgb(243,203,165) */
+}
+
+.nav-options-container > a:nth-child(1)::before {
+	background-image: url('../images/icons/plane.png');
+}
+.nav-options-container > a:nth-child(2)::before {
+	height: 1.5rem;
+	background-image: url('../images/icons/hotel.png');
+}
+
+.nav-options-container > a:nth-child(3)::before {
+	height: 1.7rem;
+	background-image: url('../images/icons/map.png');
+}
+
+.nav-options-container > a:hover::before {
+	background-size: contain;
+	left: -1.5rem;
+}
+
+.site-name {
+	font-size: 5rem;
+	padding-top: 6rem;
+	color: black;
+	font-weight: bold;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	/* font-family: 'volkhov', serif; */
+}
+
+.site-name > span {
+	background-color: #268389;
+	padding: 0.5rem;
+	color: white;
+}
+
+.slogan {
+	display: flex;
+	justify-content: flex-end;
+	/* padding-top: 1.5rem; */
+	margin-top: 0;
+	width: 100%
+	/* padding-left: 50% !important; */
+}
+
+.slogan > h1 {
+	width: 60%;
+	text-align: right;
+	font-size: 3rem;
+	color: white;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container-one > .slide-down {
+	padding: 0;
+	/* padding-top: 5rem; */
+	/* margin-top: 5rem; */
+	/* margin: 0; */
+	display: flex;
+	position: relative;
+	bottom: 1rem;
+	justify-content: center;
+	padding-top: 4rem;
+}
+
+.slide-down img {
+	/* transform: rotateZ(90deg); */
+	width: 7rem;
+	position: relative;
+	height: 7rem;
+	cursor: pointer;
+	animation: alt 2s ease-in-out 0s infinite;
+}
+
+.slide-down img:hover {
+	opacity: 0.7;
+}
+
+@keyframes alt {
+	0%,
+	100% {
+		top: 0;
+	}
+	50% {
+		top: 1rem;
+	}
+}
+
+/* ? .container-two{ */
+
+.container-two {
+	background-image: url('../images/bg-images/vacation.jpg');
+	background-size: cover;
+	/* background-position-y: 30%; */
+	background-repeat: no-repeat;
+	display: flex;
+	position: relative;
+	padding: 0 2rem 3rem 1rem;
+	padding-top: 10rem;
+	/* overflow: hidden; */
+	flex-direction: column;
+}
+
+.search-container {
+	width: 80vw;
+	/* top: 10rem; */
+	position: relative;
+	max-width: 50rem;
+	min-width: 12rem;
+	display: flex;
+	margin: 0 auto;
+}
+
+#search-field {
+	width: 100%;
+	height: 3rem;
+	border-radius: 2rem;
+	border-top-right-radius: 2rem;
+	border-bottom-right-radius: 0;
+	outline: none;
+	border: none;
+	padding: 1rem;
+	padding-left: 6rem;
+	font-size: 100%;
+}
+
+
+.search-options-list {
+	width: 100%;
+	min-width: 6rem;
+	position: absolute;
+	top: 3rem;
+	margin: 0 auto;
+	max-height: 15rem;
+	overflow-y: auto;
+	z-index: 10;
+	scrollbar-width: thin;
+	/* background: #268389; */
+}
+
+.search-option {
+	height: 2.5rem;
+	border: none;
+	margin-top: 0.5rem;
+	outline: none;
+	padding-left: 3rem;
+	width: 100%;
+	background: white;
+	text-align: left;
+	font-size: 1.1rem;
+	background-image: url('../images/icons/location.png');
+	background-size: 1.5rem;
+	background-repeat: no-repeat;
+	background-position: 0.5rem 0.5rem;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.search-option:hover,
+.search-option:focus {
+	background-color: #cecece;
+}
+
+.dropdown {
+	position: absolute;
+	background-image: url('../images/icons/country.png'), url('../images/icons/caret.png');
+	background-size: 2rem, 1rem;
+	background-position: 1rem 0.45rem, 3.6rem 1rem;
+	background-repeat: no-repeat, no-repeat;
+	width: 30%;
+	max-width: 5rem;
+	height: 3rem;
+	border-radius: 2rem;
+	outline: none;
+	border: none;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.search-container .cancel {
+	background: none;
+	background-repeat: no-repeat;
+	background-position: .5rem 0.4rem;
+	background-image: url('../images/icons/cancel.png');
+	background-size: 2rem 2rem;
+	position: absolute;
+	background-color: white;
+	right: .5rem;
+	top: 0.15rem;
+	width: 3rem;
+	border-radius: 75%;
+	height: 2.6rem;
+	border: none;
+	outline: none;
+	background-color: none;
+	cursor: pointer;
+	transition: transform 0.3s ease-in-out;
+}
+/* 
+.cancel:hover {
+	background-color: #cecece
+} */
+
+.dropdown:hover,
+.dropdown:focus {
+	background-color: #cecece;
+}
+
+.search-results-container{
+	display: flex;
+	height: 100%;
+}
+
+.search-results{
+	display: flex;
+	position: relative;
+	padding-top: 3rem;
+	/* padding-bottom: 3.5rem; */
+	height: 100%;
+	overflow: hidden;
+	flex-wrap: nowrap;
+	z-index: 8;
+	scrollbar-width: thin;
+	display: flex;
+	/* margin: 0 0 3rem 0; */
+}
+
+.city-name{
+	font-size: 4rem;
+	width: 40%;
+	/* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+	color: white;
+	position: relative;
+	margin-bottom: 0
+}
+
+.card{
+	width: 80%;
+	padding: 1rem;
+	min-width: 24rem;
+	height: 100%;
+	max-height: 24rem;
+	min-height: 12rem;
+	display: flex;
+	flex: 0 0 auto;
+	margin-right: 1rem;
+	/* padding-bottom: 2rem; */
+	flex-direction: column;
+	background-color: white;
+	border-radius: .5rem;
+	position: relative;
+	/* top: 0%; */
+	/* transition: margin .5s ease-in-out */
+}
+
+.card-img{
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.card-img[tabindex="0"]{
+	background-image: url('../images/others/imgDisplay1.jpg');
+}
+
+.card-img[tabindex="1"]{
+	background-image: url('../images/others/imgDisplay2.jpg');
+}
+
+.card-img[tabindex="2"]{
+	background-image: url('../images/others/imgDisplay3.jpg');
+}
+
+.card-img[tabindex="3"]{
+	background-image: url('../images/others/imgDisplay4.jpg');
+}
+
+.card-desc{
+	margin-top: 1rem;
+}
+
+.location{
+	padding: .7rem 1rem .7rem 2.5rem;
+	background: #269389;
+	color: black;
+	background: url('/location.png');
+	background-color: #cecece;
+	bottom: 0;
+	font-weight: bold;
+	background-repeat: no-repeat;
+	background-position: .3rem .15rem;
+	background-size: 2rem 2rem;
+	position: absolute;
+}
+
+.search-results-outer{
+	position: relative;
+	width: 60%;
+	display: none;
+}
+
+.slide{
+	position: absolute;
+	top: 50%;
+	width: 3rem;
+	/* transform: translateY(-50%); */
+	height: 3rem;
+	background-size: cover;
+	background-repeat: no-repeat;
+	transition: transform .3s ease-in-out;
+	cursor: pointer;
+		z-index: 12;
+
+}
+
+.slide-prev{
+	background-image: url('../images/icons/slide_prev.png');
+	left: .5rem;
+	
+}
+
+.slide-next{
+	background-image: url('../images/icons/slide.png');
+	right: .5rem;
+}
+
+.slide:hover{
+	transform: scale(1.2);
+}
