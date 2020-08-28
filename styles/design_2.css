@@ -22,7 +22,7 @@
         flex-direction: column;
         right: 0;
         top: 3.1rem;
-        width: 40%;
+        width: 45%;
         max-width: 10rem;
         margin-right: 1rem;
         text-align: right;
@@ -30,6 +30,7 @@
         padding: 0;
         overflow: hidden;
         opacity: 0;
+        visibility: hidden;
         transition: opacity .3s ease-in-out
     }
 

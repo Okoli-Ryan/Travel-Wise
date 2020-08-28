@@ -67,7 +67,7 @@ optionList.addEventListener('click', (e) => {
 	if (e.target.className === 'search-option') {
 		search_bar.value = e.target.innerHTML;
 		document.getElementsByClassName('city-name')[0].innerHTML = e.target.innerHTML;
-		search_results_outer.style.display = 'block';
+		search_results_outer.style.visibility = "visible"
 		//
 	}
 });
@@ -79,7 +79,9 @@ cancel.onclick = () => {
 };
 
 menu.onclick = () => {
-	if (nav_display) nav_options_container.style.opacity = 0;
-	else nav_options_container.style.opacity = 1;
+	if (nav_display) {nav_options_container.style.visibility = "hidden";
+nav_options_container.style.opacity = 0}
+	else {nav_options_container.style.visibility = "visible";
+nav_options_container.style.opacity = 1}
 	nav_display = !nav_display;
 };
