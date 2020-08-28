@@ -74,7 +74,7 @@ optionList.addEventListener('click', (e) => {
 
 cancel.onclick = () => {
 	search_bar.value = '';
-	search_results_outer.style.display = 'none';
+	search_results_outer.style.visibility = "hidden"
 	document.getElementsByClassName('city-name')[0].innerHTML = '';
 };
 

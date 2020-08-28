@@ -408,7 +408,7 @@ html {
 .search-results-outer{
 	position: relative;
 	width: 60%;
-	display: none;
+	visibility: hidden;
 }
 
 .slide{

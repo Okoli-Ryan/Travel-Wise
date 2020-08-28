@@ -102,4 +102,8 @@
         padding-top: 0
     }
 
+    .card{
+        width: 100%;
+    }
+
 }
