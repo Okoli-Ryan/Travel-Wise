@@ -28,7 +28,7 @@ html {
 }
 
 .container-one {
-	background-image: url('../images/bg-images/beach.jpg');
+	background-image: url('../images/bg-images/beach_2.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;	
 	/* display: none; */
@@ -197,7 +197,7 @@ html {
 /* ? .container-two{ */
 
 .container-two {
-	background-image: url('../images/bg-images/vacation.jpg');
+	background-image: url('../images/bg-images/vacation_2.jpg');
 	background-size: cover;
 	/* background-position-y: 30%; */
 	background-repeat: no-repeat;
@@ -371,19 +371,19 @@ html {
 }
 
 .card-img[tabindex="0"]{
-	background-image: url('../images/others/imgDisplay1.jpg');
+	background-image: url('../images/others/imgDisplay_redo1.jpg');
 }
 
 .card-img[tabindex="1"]{
-	background-image: url('../images/others/imgDisplay2.jpg');
+	background-image: url('../images/others/imgDisplay_redo2.jpg');
 }
 
 .card-img[tabindex="2"]{
-	background-image: url('../images/others/imgDisplay3.jpg');
+	background-image: url('../images/others/imgDisplay_redo3.jpg');
 }
 
 .card-img[tabindex="3"]{
-	background-image: url('../images/others/imgDisplay4.jpg');
+	background-image: url('../images/others/imgDisplay_redo4.jpg');
 }
 
 .card-desc{
